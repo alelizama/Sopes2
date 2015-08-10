@@ -149,7 +149,9 @@ public class Ventana extends JFrame implements ItemListener, ActionListener
 
                 if(splitTemp[0].equals("f") | splitTemp[0].equals("F"))
                 {
-                    log.append("\n       "+ nombreProceso + proceso.liberarTodosRecursos(listaRecursos));    
+                    log.append("\n       "+ nombreProceso + " finalizado"); 
+                    log.append("\n       "+ nombreProceso + proceso.liberarTodosRecursos(listaRecursos));                        
+                    listaProcesos.remove(proceso);
                     recursoLiberado();                
                 }
                 else
@@ -204,9 +206,11 @@ public class Ventana extends JFrame implements ItemListener, ActionListener
                     } 
 
                     if(splitTemp[0].equals("f") | splitTemp[0].equals("F"))
-                    {
-                        log.append("\n       "+ nombreProceso + proceso.liberarTodosRecursos(listaRecursos));
-                        recursoLiberado();
+                    {                        
+                        log.append("\n       "+ nombreProceso + " finalizado"); 
+                        log.append("\n       "+ nombreProceso + proceso.liberarTodosRecursos(listaRecursos));                        
+                        listaProcesos.remove(proceso);
+                        recursoLiberado();                
                     }
                     else
                     {                
