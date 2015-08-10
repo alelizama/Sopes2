@@ -602,9 +602,7 @@ public class Ventana extends JFrame implements ItemListener, ActionListener
             listaRecursos = new ArrayList();
             listaCiclo = new ArrayList();
             log.setText("_____Log");
-            ciclo = false;           
-            banderaDeteccion = false; 
-            banderaNegacion = false;
+            ciclo = false;            
         }
     }     
 }
